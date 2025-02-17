@@ -19,7 +19,9 @@ const pool = mariadb.createPool({
 });
 
 
-
+app.get('/greeting', (req, res) => {
+    res.send('Hello World!');
+});
 
 app.post('/register', async (req, res) => {
     const { username, norep } = req.body;
